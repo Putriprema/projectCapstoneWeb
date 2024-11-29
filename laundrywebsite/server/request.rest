@@ -1,0 +1,11 @@
+POST http://localhost:5555/api/v1/Login
+Content-Type: application/json
+
+{
+    "email" : "aaaa@gmail.com",
+    "password" : "aaaa"
+}
+
+###
+GET http://localhost:5555/api/v1/verify
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsIm5hbWUiOiJDYXJpc3NhIEJ5ZXJzIiwiZW1haWwiOiJhYWFhQGdtYWlsLmNvbSIsImlhdCI6MTcwMjMyNzQ0NiwiZXhwIjoxNzAyMzI3NTA2fQ.WrN-VDZTwfNdU7QQVev2WJYJsK6ntbwCQXMC1A2w_B0

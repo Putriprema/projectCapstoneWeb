@@ -1,0 +1,52 @@
+body {
+    background: blue;
+    border-radius: 20px;
+  }
+  .Review{
+    width: 50%;
+    height: 120%;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+
+  .slick-slide > div {
+    margin: 0 10px;
+    text-align: center;
+  }
+  .slick-list {
+    margin: 0 -10px;
+    text-align: center;
+  }
+
+  
+  .card {
+    border: 1px solid #fff;
+    
+    overflow: hidden;
+    height: 400px;
+    color: blue;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+
+  .card-top  img {
+    width: 10%;
+    height: 10%;
+    object-fit: fit;
+    background: black;
+    object-fit: cover;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  

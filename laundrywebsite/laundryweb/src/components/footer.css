@@ -1,0 +1,199 @@
+.section_padding{
+  padding: 3rem 3rem;
+  height: 450px;
+}
+
+/* editing bagian footer */
+.footer {
+  background-color: #327094;
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+ 
+}
+
+
+.sb_footer {
+display: flex;
+justify-content: flex-end;
+}
+
+.sb_footer-links,
+.sb_footer-links_div {
+margin-right: 35%;  
+}
+
+.sb_footer-links-content {
+display: flex;
+flex-direction: column;
+}
+
+/* Styling untuk logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  
+}
+
+.logo-container img {
+  width: 300px; 
+  height: auto; 
+  margin-left: 20%; 
+  margin-top: 10px;
+}
+
+
+/* editing bagian icon */
+.sb_footer-links-contentt  a{
+margin-right: 20px; 
+text-decoration: none; 
+
+}
+
+/* editing seluruh bagian navigasi */
+.sb_footer_nav{
+  margin-left: 210%;
+    position: relative;
+    top: -290px; 
+  }
+
+  /* editing bagian headline navigasi */
+.sb_footer_nav h1{
+    color: white; 
+    font-size: 24pt;
+    margin-bottom: 1rem;
+    }
+
+/* editing bagian list navigasi */
+.sb_footer_nav a {
+  color: white; 
+  font-size: 14pt;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-weight: normal;
+  
+}
+
+
+/* hover bagian navigasi */
+.sb_footer_nav a:hover {
+  color: #81e6d9; 
+  text-decoration: none; 
+}
+
+/* bagian headline layanan dan kontak */
+.sb_footer-links_div {
+  width: 150px;
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: white;
+  font-size: 16pt;
+  flex: 1;
+  width: auto;
+  align-items: flex-start;
+}
+
+.sb_footer-links-content a {
+  text-decoration: none;
+}
+
+/* editing pada seluruh kontak kami */
+.sb_footer-links_divv {
+  width: 150px;
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: white;
+  flex: 1;
+  width: auto;
+  align-items: flex-start;
+}
+
+/* editing pada headline kontak kami */
+.sb_footer-links_divv h1 {
+  display: row;
+  justify-content: flex-end; 
+  color: white;
+  font-size: 24pt;
+  text-decoration: none;
+  flex-direction: row;
+  margin-bottom: 30px;
+  }
+
+/* editing sosmed pada kontak kami */
+.sb_footer-links_divv a {
+display: row;
+justify-content: flex-end; 
+color: white;
+font-size: 25pt;
+text-decoration: none;
+margin-top: 1rem;
+flex-direction: row;
+}
+
+
+
+.contact-icons a {
+  margin-bottom: 20px; 
+}
+
+/* hover kontak kami */
+.sb_footer-links_divv a:hover {
+  color: #81e6d9; 
+}
+
+
+/* tulisan bagian layanan kami */
+.sb_footer-links_div p{
+  width: 150px;
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  flex-direction: column;
+  color: white;
+  font-size: 14pt;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+/* hover list layanan kami */
+.sb_footer-links_div p:hover {
+  color: #81e6d9; 
+}
+
+.headline {
+  text-align: center;
+  color: white; 
+  margin-top: 4rem; 
+}
+
+.headline h4 {
+  font-size: 18pt; 
+}
+
+.contact-photo {
+  display: flex;
+  justify-content: center; 
+  margin-top: 1rem; 
+}
+
+.contact-photo img {
+  width: 250px; 
+  height: 90px;
+  cursor: pointer; 
+}
+
+
+/* bagian copyright */
+.sb_footer-copyright{
+  font-size: 14pt;
+  line-height: 15px;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}
