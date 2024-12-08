@@ -6,13 +6,14 @@ import midtransClient from "midtrans-client"
 
 const router = express.Router()
 
+// disini endpoint
 router.post('/process-transaction', (req, res) => {
     try {
 
         const snap = new midtransClient.Snap({
             isProduction: false, 
-            serverKey: "a ",
-            clientKey: " b",
+            serverKey: "SB-Mid-server-EQiCt4GGIHs5q7CwNrRUK5xU",
+            clientKey: "SB-Mid-client-kuKtTg-Qh-z-zA1a",
         })
         
         // harus sama kyk yg di Payment.jsx

@@ -25,8 +25,9 @@ import Toko from '../pages/Toko';
 import Newpass from "../pages/Newpass";
 import Newpassm from "../pages/Newpassm";
 import Payment from '../Payment';
+import Bayar from '../Bayar';
+import Kurir from '../Kurir';
 import SimpanKeranjang from '../pages/SimpanKeranjang';
-import NotFound from '../pages/page404';
 import HalamanCrud from '../tabelcrud/halamanCrud';
 import AddUser from '../components/AddUser';
 import UserList from '../components/UserList';
@@ -40,7 +41,6 @@ const Routing = () => {
            
             <Route path='/' element={<Home/>}></Route>
             <Route path='/home' element={<Home/>}></Route>
-            <Route path="*" element={<NotFound />}/>
             {/* Pubclic Routes */}
             <Route element={<PublicRoutes isLoggin={isLoggin} />}>
                 <Route path="/login-options" element={<LoginOptions />}/>
@@ -67,6 +67,8 @@ const Routing = () => {
                 <Route path='/Newpass' element={<Newpass/>}></Route>
                 <Route path='/Newpassm' element={<Newpassm/>}></Route>
                 <Route path='/payment' element={<Payment/>}></Route>
+                <Route path='/bayar' element={<Bayar/>}></Route>
+                <Route path='/Kurir' element={<Kurir/>}></Route>
                 <Route path='/simpanKeranjang' element={<SimpanKeranjang/>}></Route>
                 <Route path='/halamanCrud' element={<HalamanCrud/>}></Route>
                 <Route path='/AddUser' element={<AddUser/>}></Route>
