@@ -20,7 +20,7 @@ const Home1 = () => {
   return (
     <div>
      <h1 data-aos="fade-up" className="text-center flex justify-center items-center" style={{ marginTop: "10%", color: 'black', fontSize: '24pt', fontWeight: 'bold' }}>Alasan mengapa memilih kami</h1>
-     <p data-aos="fade-up" className="text-center flex justify-center items-center" style={{ marginTop: "1%", fontSize: '16pt', fontWeight: 'normal'}}>Kami bekerja sama dengan penyedia jasa laundry yang telah teruji dan terpercaya, memastikan kualitas layanan yang dijamin untuk setiap pengguna</p>
+     <p data-aos="fade-up" className="text-center flex justify-center items-center" style={{ marginTop: "1%", fontSize: '16pt', fontWeight: 'normal'}}>Penyedia jasa laundry yang telah teruji dan terpercaya, memastikan kualitas layanan yang dijamin untuk setiap pengguna</p>
       {/* bagian card kelebihan kami */}
       <div data-aos="fade-up"
         className="d-flex justify-content-around"
@@ -55,8 +55,7 @@ const Home1 = () => {
             </Card.Title>
             <Card.Text>
               Platform kami di desain untuk memudahkan pengguna dalam melakukan
-              pemesanan, pembayaran, serta melacak status laundry secara efisien
-              dan cepat.
+              pemesanan, pembayaran, secara efisien.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -128,10 +127,10 @@ const Home1 = () => {
           </div>
           <Card.Body style={{ textAlign: "center" }}>
             <Card.Title style={{ fontWeight: "bold" }}>
-              Kemitraan dengan Penyedia Laundry Terpercaya
+               Penyedia Laundry Anda yang Terpercaya
             </Card.Title>
             <Card.Text>
-              Kami bekerja sama dengan penyedia jasa laundry yang telah teruji
+            Jasa laundry yang telah teruji
               dan terpercaya, memastikan kualitas layanan yang dijamin untuk
               setiap pengguna.
             </Card.Text>

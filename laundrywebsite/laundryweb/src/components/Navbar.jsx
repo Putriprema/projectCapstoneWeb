@@ -31,7 +31,7 @@ const CustomNavbar = ({ navValue }) => {
         { subName: "FA&Q", subLink: "/faq" },
       ],
     },
-    { name: "Layanan", link: "/layanan" },
+    { name: "Layanan", link: "/toko/den-gebol" },
     { name: "Tentang Kami", link: "/tentang-kami" },
   ];
 

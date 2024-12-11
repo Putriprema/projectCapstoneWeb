@@ -61,25 +61,6 @@ const LayananKami = () => {
             </Button>
           </Card.Body>
         </Card>
-  
-            {/* layanan cuci kilat*/}
-            <Card data-aos="fade-up" style={{ width: '30rem', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)', borderRadius: '20px', margin: '0 10px' }}>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <Card.Img variant="top" src={cucikilat} alt="cucisetrika" style={{
-              width: '500px',
-              height: '300px',
-              objectFit: 'cover',
-              borderRadius: '20px 20px 0 0',
-              boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
-            }} />
-          </div>
-          <Card.Body style={{ textAlign: 'center' }}>
-            <Card.Title style={{ fontWeight: 'bold' }}>Cuci Kilat</Card.Title>
-            <Button variant="primary" className="btn-lg">
-            <a style={{ color: 'white', textDecoration:'none'}} href="/Layanan">Pilih</a>
-            </Button>
-          </Card.Body>
-        </Card>
       </div>
     </div>
   );

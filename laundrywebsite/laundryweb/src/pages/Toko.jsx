@@ -294,7 +294,7 @@ const Toko = () => {
       <h3>Layanan Terpilih</h3>
     </div>
     <div className="flex justify-between items-center pb-4">
-      <h5>Order ID</h5>
+      <h5>Kode Order</h5>
       <h3>{orderId}</h3>
     </div>
     <div className="flex justify-between items-center pb-4">

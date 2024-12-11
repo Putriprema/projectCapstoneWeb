@@ -1,84 +1,91 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
-import { Link } from "react-router-dom";
+import Table from "react-bootstrap/Table";
 import Navbar3 from "../components/Navbar3";
-import Footer from '../components/Footer';
+import Footer from "../components/Footer";
+
 const UserList = () => {
-  const [users, setUser] = useState([]);
+  const [users, setUsers] = useState([]); // Memperbaiki setUser menjadi setUsers
 
   useEffect(() => {
     getUsers();
   }, []);
 
   const getUsers = async () => {
-    const response = await axios.get("http://localhost:4000/users");
-    setUser(response.data);
+    try {
+      const response = await axios.get("http://localhost:2000/users");
+      setUsers(response.data); // Memperbarui state dengan data dari API
+    } catch (error) {
+      console.error("Error fetching users:", error); // Menangani error pengambilan data
+    }
   };
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/users/${id}`);
-      getUsers();
+      await axios.delete(`http://localhost:2000/users/${id}`); // Perbaiki URL delete dengan backticks
+      getUsers(); // Memanggil getUsers untuk mendapatkan data terbaru setelah delete
     } catch (error) {
-      console.log(error);
+      console.error("Error deleting user:", error); // Menangani error saat menghapus data
     }
   };
 
   return (
     <>
-      <Navbar3/>
-      <h1 style={{ marginLeft: '20%', marginTop:'5%', fontSize:'20pt' }}>Rekap Transaksi</h1>
-      <div className="columns mt-5 is-centered">
-        <div className="column is-half" >
-          <Link to={`/AddUser`} className="btn btn-success" style={{ marginLeft: '20%', marginBottom:'2%' }}>
-            Add New
-          </Link>
-          <Table striped bordered hover style={{ width: '75%', height: '75%', marginLeft:"20%", marginBottom:'5%'}}>
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Id order</th>
-                <th>Nama</th>
-                <th>Layanan</th>
-                <th>Harga</th>
-                <th>Durasi</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users.map((user, index) => (
-                <tr key={user.id}>
-                  <td>{index + 1}</td>
-                  <td>{user.idOrder}</td>
-                  <td>{user.name}</td>
-                  <td>{user.service}</td>
-                  <td>{user.harga}</td>
-                  <td>{user.durasi}</td>
-                  <td>
-                    <Link
-                      to={`/EditUser/${user.id}`}
-                      className="btn btn-info mr-2"
-                    >
-                      Edit
-                    </Link>
-                    <Button
-                      variant="danger"
-                      size="mr-2"
-                      onClick={() => deleteUser(user.id)}
-                    >
-                      Delete
-                    </Button>
-                  </td>
+      <Navbar3 />
+      <div
+        style={{
+          backgroundColor: "white",
+          minHeight: "100vh",
+          paddingTop: "100px",
+        }}
+      >
+        <div className="d-flex justify-content-center">
+          <div className="w-75">
+            <Table striped bordered hover>
+              <thead className="bg-primary text-white">
+                <tr>
+                  <th className="text-center">No</th>
+                  <th className="text-center">ID</th>
+                  <th className="text-center">Order ID</th>
+                  <th className="text-center">Nama</th>
+                  <th className="text-center">Alamat</th>
+                  <th className="text-center">Total</th>
+                  <th className="text-center">Kurir</th>
+                  <th className="text-center">Tanggal Transaksi</th>
+                  <th className="text-center">Waktu Mulai Laundry</th>
+                  <th className="text-center">Waktu Selesai Laundry</th>
+                  <th className="text-center">Action</th>
                 </tr>
-              ))}
-            </tbody>
-          </Table>
+              </thead>
+              <tbody>
+                {users.map((user, index) => (
+                  <tr key={user.id}>
+                    <td className="text-center">{index + 1}</td>
+                    <td className="text-center">{user.id}</td>
+                    <td className="text-center">{user.order_id}</td>
+                    <td className="text-center">{user.name}</td>
+                    <td className="text-center">{user.address}</td>
+                    <td className="text-center">{user.total}</td>
+                    <td className="text-center">{user.courier}</td>
+                    <td className="text-center">{user.transactionDate}</td>
+                    <td className="text-center">{user.orderTime}</td>
+                    <td className="text-center">{user.estimatedCompletionTime}</td>
+                    <td className="text-center">
+                      <button
+                        onClick={() => deleteUser(user.id)}
+                        className="btn btn-danger"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
