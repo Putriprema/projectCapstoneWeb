@@ -1,0 +1,42 @@
+GET http://localhost:2000/users/1
+
+###
+GET http://localhost:2000/users
+
+
+###
+POST http://localhost:2000/users
+Content-Type: application/json
+
+{
+    "id":"10",
+    "order_id":"ef42",
+    "name": "ARUHk",
+    "total": "30000",
+    "courier": "igus",
+    "transactionDate": "02/12/2024",
+    "orderTime": "14:30:35",
+    "estimatedCompletionTime": "21:30:35"
+}
+
+###
+PATCH  http://localhost:2000/users/5
+Content-Type: application/json
+
+{
+    "id":"5",
+    "order_id":"dwe333"
+    "name": "duduk",
+    "total": "30000",
+    "courier": "igus",
+    "transactionDate": "02/12/2024",
+    "orderTime": "14:30:35",
+    "estimatedCompletionTime": "21:30:35"
+}
+
+
+###
+DELETE  http://localhost:2000/users/5
+Content-Type: application/json
+
+
