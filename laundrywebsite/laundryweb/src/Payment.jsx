@@ -10,9 +10,9 @@ import 'aos/dist/aos.css';
 import { v4 as uuidv4 } from 'uuid'; // Import UUID
 
 const Payment = () => {
-  const location = useLocation(); // Get the passed state data
-  const navigate = useNavigate(); // Initialize useNavigate hook
-  const { orderId, subtotal } = location.state || {}; // Destructure the orderId and subtotal
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { orderId, subtotal } = location.state || {};
 
   const [name, setName] = useState("");
   const [order_id, setOrder_id] = useState(orderId || "");
@@ -25,8 +25,9 @@ const Payment = () => {
   const [courier, setCourier] = useState("");
   const [address, setAddress] = useState("");
 
-  const [statusMessage, setStatusMessage] = useState(""); // State for status message
-  const [isDataSaved, setIsDataSaved] = useState(false); // State untuk memantau apakah data telah disimpan
+  const [statusMessage, setStatusMessage] = useState("");
+  const [isDataSaved, setIsDataSaved] = useState(false);
+  const [errorFields, setErrorFields] = useState([]); // New state to track which fields are empty
 
   const selectRandomCourier = () => {
     const couriers = ["udin siap!", "agus siap!", "riski siap!"];
@@ -35,28 +36,39 @@ const Payment = () => {
   };
 
   useEffect(() => {
-    const currentDate = new Date(); // Ambil tanggal dan waktu dari perangkat
-    setTransactionDate(currentDate.toLocaleDateString("id-ID")); // Format tanggal dalam bentuk lokal Indonesia
-    
-    const currentTime = currentDate.toLocaleTimeString("id-ID"); // Format waktu
+    const currentDate = new Date();
+    setTransactionDate(currentDate.toLocaleDateString("id-ID"));
+    const currentTime = currentDate.toLocaleTimeString("id-ID");
     setOrderTime(currentTime);
   
     const estimatedTime = new Date();
-    estimatedTime.setHours(estimatedTime.getHours() + 5); // Tambahkan 5 jam untuk estimasi waktu selesai
-    setEstimatedCompletionTime(estimatedTime.toLocaleTimeString("id-ID")); // Format waktu perkiraan selesai
+    estimatedTime.setHours(estimatedTime.getHours() + 5); // Add 5 hours for estimated time
+    setEstimatedCompletionTime(estimatedTime.toLocaleTimeString("id-ID"));
   
-    selectRandomCourier(); // Pilih kurir secara acak
+    selectRandomCourier();
   }, []);
 
   const saveUser = async (e) => {
     e.preventDefault();
 
-    // Generate unique ID
-    const userId = uuidv4(); // Generate a unique ID
+    // Reset error fields
+    setErrorFields([]);
 
-    // Prepare the data with generated userId
+    // Validasi: Memastikan semua field yang wajib diisi sudah terisi
+    const missingFields = [];
+    if (!name) missingFields.push("Nama");
+    if (!address) missingFields.push("Alamat atau link gmaps");
+
+    if (missingFields.length > 0) {
+      setErrorFields(missingFields);
+      setStatusMessage("Harap isi data dengan lengkap terlebih dahulu.");
+      return;
+    }
+
+    const userId = uuidv4();
+
     const data = {
-      id: userId, // Automatically generated ID
+      id: userId,
       order_id,
       name,
       total,
@@ -69,13 +81,13 @@ const Payment = () => {
 
     try {
       const response = await axios.post("http://localhost:2000/users", data);
-      console.log("Response from server:", response.data); // Cek respons dari server
-      setStatusMessage("Data berhasil disimpan!"); // Pesan sukses
-      setIsDataSaved(true); // Tandai bahwa data telah disimpan
+      console.log("Response from server:", response.data);
+      setStatusMessage("Data berhasil disimpan! silahkan lanjut ke pembayaran");
+      setIsDataSaved(true);
     } catch (error) {
-      console.error("Error details:", error.response ? error.response.data : error.message); // Debug error
-      setStatusMessage("Terjadi kesalahan, coba lagi."); // Pesan error
-      setIsDataSaved(false); // Tandai bahwa data belum disimpan
+      console.error("Error details:", error.response ? error.response.data : error.message);
+      setStatusMessage("Terjadi kesalahan, coba lagi.");
+      setIsDataSaved(false);
     }
   };
 
@@ -95,11 +107,11 @@ const Payment = () => {
         </h3>
         <Box
           sx={{
-            padding: '20px', // Padding di sekitar form
-            margin: 'auto', // Tengah kan form di layar
-            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Tambahkan shadow untuk tampilan
-            borderRadius: '8px', // Membuat sudut form melengkung
-            backgroundColor: '#f9f9f9', // Memberikan background warna pada form
+            padding: '20px',
+            margin: 'auto',
+            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+            borderRadius: '8px',
+            backgroundColor: '#f9f9f9',
           }}
         >
           <form onSubmit={saveUser} style={{ width: '60%', display: 'flex', flexDirection: 'column' }}>
@@ -125,6 +137,8 @@ const Payment = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               sx={{ mb: 1.5 }}
+              error={errorFields.includes("Nama")}
+              helperText={errorFields.includes("Nama") ? "Nama harus diisi" : ""}
             />
             <TextField
               type="text"
@@ -132,6 +146,8 @@ const Payment = () => {
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               sx={{ mb: 2 }}
+              error={errorFields.includes("Alamat atau link gmaps")}
+              helperText={errorFields.includes("Alamat atau link gmaps") ? "Alamat harus diisi" : ""}
             />
             <TextField
               type="text"

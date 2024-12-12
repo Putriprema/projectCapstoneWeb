@@ -18,7 +18,7 @@ const Navbar3 = () => {
         <div className="flex items-center cursor-pointer font-[poppins] text-white">
           <img src={logo} alt="Logo" className="h-16 mr-2" style={{ height: '150px', marginLeft: '30px' }} />
         </div>     
-        <h2 className="navbar-title" style={{ marginLeft: '7%', fontWeight:'bold' }} >Dashboard</h2>
+        <h2 className="navbar-title" style={{ marginLeft: '7%', fontWeight:'bold' }} >Dashboard Admin LaundryEase</h2>
         <Navbar.Toggle aria-controls="navbar-dark-example" />
         <Navbar.Collapse id="navbar-dark-example">
           <Nav className="ml-auto" style={{ gap: '40px', fontSize:'16pt', marginRight:'9%'}}>
