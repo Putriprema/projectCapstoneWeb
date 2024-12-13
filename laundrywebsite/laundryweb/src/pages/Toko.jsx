@@ -154,139 +154,156 @@ const Toko = () => {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", marginTop: "40px", height: "200vh" }}>
           <div style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.2)", borderRadius: "10px", width: "67%", height: "33vh" }}>
-          <Accordion>
-             {/* Daftar Layanan */}
-          </Accordion>
-            <h3 className="pl-5 pb-5 pt-4">Daftar Layanan</h3>
-            <Accordion>
+      
+      
+     {/* Cuci Kering */}
+     <Accordion style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.2)", width: "100%" }}>
+<Accordion.Header>
+  <h5>Cuci Kering</h5>
+</Accordion.Header>
+  <div style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.2)" }}>
+    {/* Item 1: Kemeja */}
+    <div style={{ marginLeft: "20px" }}>
+    <div className="flex justify-between items-center">
+      <div>
+        <h5>Kemeja</h5>
+        <p>Rp2.000/pcs</p>
+      </div>
+      <div className="flex">
+        <button 
+          onClick={() => handleServiceSelection('Kemeja (Cuci Kering)', 2000)}
+          style={{ marginLeft: "10px" }}
+        >
+          <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
+        </button>
+        <button 
+          onClick={() => handleServiceDecrease('Kemeja (Cuci Kering)')} 
+          style={{ marginLeft: "10px" }}
+        >
+          <img src={minus} alt="minus" style={{ width: "15px", height: "15px", marginRight: "20px" }} />
+        </button>
+      </div>
+    </div>
 
-               {/* Cuci Kering */}
-               <Accordion.Item style={{ border: "none" }}>
-                <Accordion.Header style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.2)" }}>
-                  <h5>Cuci Kering</h5>
-                </Accordion.Header>
-                <Accordion.Body style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.2)" }}>
-                <div className="flex justify-between items-center">
-                <div>
-                  <h5>Kemeja</h5>
-                  <p>Rp2.000/pcs</p>
-                </div>
-                <button 
-                onClick={() => handleServiceSelection('Kemeja (Cuci Kering)', 2000)} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
-              </button>
-              <button 
-                onClick={() => handleServiceDecrease('Kemeja (Cuci Kering)')} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={minus} alt="minus" style={{ width: "15px", height: "15px" }} />
-              </button>
-              </div>
+    {/* Item 2: Baju Kaos */}
+    <div className="flex justify-between items-center">
+      <div>
+        <h5>Baju Kaos</h5>
+        <p>Rp1.500/pcs</p>
+      </div>
+      <div className="flex">
+        <button 
+          onClick={() => handleServiceSelection('Baju Kaos (Cuci Kering)', 1500)} 
+          style={{ marginLeft: "10px" }}
+        >
+          <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
+        </button>
+        <button 
+          onClick={() => handleServiceDecrease('Baju Kaos (Cuci Kering)')} 
+          style={{ marginLeft: "10px" }}
+        >
+          <img src={minus} alt="minus" style={{ width: "15px", height: "15px", marginRight: "20px" }} />
+        </button>
+      </div>
+    </div>
 
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h5>Baju kaos</h5>
-                      <p>Rp1.500/pcs</p>
-                    </div>
-                    <button 
-                onClick={() => handleServiceSelection('Baju kaos (Cuci Kering)', 1500)} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
-              </button>
-              <button 
-                onClick={() => handleServiceDecrease('Baju kaos (Cuci Kering)')} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={minus} alt="minus" style={{ width: "15px", height: "15px" }} />
-              </button>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h5>Celana</h5>
-                      <p>Rp2.000/pcs</p>
-                    </div>
-                    <button 
-                onClick={() => handleServiceSelection('Celana Kain (Cuci Kering)', 2000)} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
-              </button>
-              <button 
-                onClick={() => handleServiceDecrease('Celana Kain (Cuci Kering)')} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={minus} alt="minus" style={{ width: "15px", height: "15px" }} />
-              </button>
-              </div>
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item style={{ border: "none" }} eventKey="1">
-              <Accordion.Header style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.2)" }}>
-                 {/* Cuci Setrika */}
-                 <h5>Cuci Setrika</h5>
-                </Accordion.Header>
-                <Accordion.Body style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.2)" }}>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h5>Kemeja</h5>
-                      <p>Rp2.000/pcs</p>
-                    </div>
-                    <button 
-                onClick={() => handleServiceSelection('Kemeja (Cuci Setrika)', 2000)} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
-              </button>
-              <button 
-                onClick={() => handleServiceDecrease('Kemeja (Cuci Setrika)')} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={minus} alt="minus" style={{ width: "15px", height: "15px" }} />
-              </button>
-              </div>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h5>Baju kaos</h5>
-                      <p>Rp1.500/pcs</p>
-                    </div>
-                    <button 
-                onClick={() => handleServiceSelection('Baju Kaos (Cuci Setrika)', 1500)} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
-              </button>
-              <button 
-                onClick={() => handleServiceDecrease('Baju Kaos (Cuci Setrika)')} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={minus} alt="minus" style={{ width: "15px", height: "15px" }} />
-              </button>
-              </div>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h5>Celana</h5>
-                      <p>Rp2.000/pcs</p>
-                    </div>
-                    <button 
-                onClick={() => handleServiceSelection('Celana/Rok Kain (Cuci Setrika)', 2000)} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
-              </button>
-              <button 
-                onClick={() => handleServiceDecrease('Celana/Rok Kain (Cuci Setrika)')} 
-                style={{ marginLeft: "10px" }}
-              >
-                <img src={minus} alt="minus" style={{ width: "15px", height: "15px" }} />
-              </button>
-              </div>
-                </Accordion.Body>
-              </Accordion.Item>
-              
-</Accordion> 
+    {/* Item 3: Celana */}
+    <div className="flex justify-between items-center">
+      <div>
+        <h5>Celana</h5>
+        <p>Rp2.000/pcs</p>
+      </div>
+      <div className="flex">
+        <button 
+          onClick={() => handleServiceSelection('Celana Kain (Cuci Kering)', 2000)} 
+          style={{ marginLeft: "10px" }}
+        >
+          <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
+        </button>
+        <button 
+          onClick={() => handleServiceDecrease('Celana Kain (Cuci Kering)')} 
+          style={{ marginLeft: "10px" }}
+        >
+          <img src={minus} alt="minus" style={{ width: "15px", height: "15px", marginRight: "20px"  }} />
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Accordion>
+
+{/* Cuci Setrika */}
+<Accordion style={{ border: "none" }}>
+    <h5 style={{marginTop:"30px", marginLeft:"20px"}}>Cuci Setrika</h5>
+  <div style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.2)" }}>
+    {/* Item 1: Kemeja */}
+    <div className="flex justify-between items-center">
+      <div style={{ marginLeft:"20px", marginTop:"40px"}}>
+        <h5 >Kemeja</h5>
+        <p>Rp2.000/pcs</p>
+      </div>
+      <div className="flex">
+        <button 
+          onClick={() => handleServiceSelection('Kemeja (Cuci Setrika)', 2000)} 
+          style={{ marginLeft: "10px", marginTop:"40px" }}
+        >
+          <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
+        </button>
+        <button 
+          onClick={() => handleServiceDecrease('Kemeja (Cuci Setrika)')} 
+          style={{ marginLeft: "10px" }}
+        >
+          <img src={minus} alt="minus" style={{ width: "15px", height: "15px", marginTop:"40px",marginRight: "20px" }} />
+        </button>
+      </div>
+    </div>
+
+    {/* Item 2: Baju Kaos */}
+    <div className="flex justify-between items-center">
+      <div style={{ marginLeft:"20px"}}>
+        <h5>Baju Kaos</h5>
+        <p>Rp1.500/pcs</p>
+      </div>
+      <div className="flex">
+        <button 
+          onClick={() => handleServiceSelection('Baju Kaos (Cuci Setrika)', 1500)} 
+          style={{ marginLeft: "10px" }}
+        >
+          <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
+        </button>
+        <button 
+          onClick={() => handleServiceDecrease('Baju Kaos (Cuci Setrika)')} 
+          style={{ marginLeft: "10px" }}
+        >
+          <img src={minus} alt="minus" style={{ width: "15px", height: "15px", marginRight: "20px" }} />
+        </button>
+      </div>
+    </div>
+
+    {/* Item 3: Celana */}
+    <div className="flex justify-between items-center">
+      <div style={{ marginLeft:"20px"}}>
+        <h5>Celana</h5>
+        <p>Rp2.000/pcs</p>
+      </div>
+      <div className="flex">
+        <button 
+          onClick={() => handleServiceSelection('Celana/Rok Kain (Cuci Setrika)', 2000)} 
+          style={{ marginLeft: "10px" }}
+        >
+          <img src={plus} alt="plus" style={{ width: "15px", height: "15px" }} />
+        </button>
+        <button 
+          onClick={() => handleServiceDecrease('Celana/Rok Kain (Cuci Setrika)')} 
+          style={{ marginLeft: "10px" }}
+        >
+          <img src={minus} alt="minus" style={{ width: "15px", height: "15px", marginRight:"20px" }} />
+        </button>
+      </div>
+    </div>
+  </div>
+</Accordion>
+
             </div> 
             <div style={{ width: "30%" }}>
   <div style={{ borderRadius: "10px", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.2)", padding: "40px 25px", marginBottom: "40px" }}>
