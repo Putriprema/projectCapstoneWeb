@@ -19,7 +19,7 @@ import Artikel from "../pages/Artikel";
 import SignupPelanggan from "../pages/auth/SignupPelanggan";
 import LoginPelanggan from "../pages/auth/LoginPelanggan";
 import Loginmitra from "../pages/LoginMitra";
-import Signupmitra from "../pages/SignupMitra";
+import SignupMitra from "../pages/SignupMitra"; // Pastikan path dan nama file benar
 import Pemulihan from '../pages/Pemulihan';
 import Toko from '../pages/Toko';
 import Newpass from "../pages/Newpass";

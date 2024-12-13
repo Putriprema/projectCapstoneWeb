@@ -161,7 +161,7 @@ const Toko = () => {
             <Accordion>
 
                {/* Cuci Kering */}
-               <Accordion.Item style={{ border: "none" }} eventKey="0">
+               <Accordion.Item style={{ border: "none" }}>
                 <Accordion.Header style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.2)" }}>
                   <h5>Cuci Kering</h5>
                 </Accordion.Header>

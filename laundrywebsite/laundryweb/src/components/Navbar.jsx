@@ -50,7 +50,7 @@ const CustomNavbar = ({ navValue }) => {
           />
         </div>
         <Navbar.Toggle aria-controls="navbar-dark-example" />
-        <Navbar.Collapse id="navbar-dark-example">
+        <Navbar id="navbar-dark-example">
           <Nav className="ml-auto pt-2" style={{ gap: "40px", fontSize: "16pt" }}>
             {Links.map((link) => (
               <React.Fragment key={link.name}>
@@ -143,7 +143,7 @@ const CustomNavbar = ({ navValue }) => {
                </>
             </Link>
           </Nav>
-        </Navbar.Collapse>
+        </Navbar>
       </Container>
     </Navbar>
   );
