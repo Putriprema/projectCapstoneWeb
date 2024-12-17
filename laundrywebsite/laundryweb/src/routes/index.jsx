@@ -18,7 +18,6 @@ import Artikel3 from '../pages/Artikel3';
 import Artikel from "../pages/Artikel";
 import SignupPelanggan from "../pages/auth/SignupPelanggan";
 import LoginPelanggan from "../pages/auth/LoginPelanggan";
-import Loginmitra from "../pages/LoginMitra";
 import Signupmitra from "../pages/Signupmitra";
 import Pemulihan from '../pages/Pemulihan';
 import Toko from '../pages/Toko';
@@ -46,7 +45,6 @@ const Routing = () => {
                 <Route path="/login-options" element={<LoginOptions />}/>
                 <Route path='/regis-pelanggan' element={<SignupPelanggan/>}></Route>
                 <Route path='/login-pelanggan' element={<LoginPelanggan/>}></Route>
-                <Route path='/login-mitra' element={<Loginmitra/>}></Route>
                 <Route path='/regis-mitra' element={<Signupmitra/>}></Route>
                 <Route path='/Pemulihan' element={<Pemulihan/>}></Route>
             </Route>
