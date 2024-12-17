@@ -1,6 +1,6 @@
 import Sequelize from "sequelize";
 
-const db = new Sequelize('kelompok2','kelompok2','',{
+const db = new Sequelize('transaksi_db','root','',{
     host: 'localhost',
     dialect: 'mysql'
 });

@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+*database.js
+laundrywebsite/backend/config/database.js
