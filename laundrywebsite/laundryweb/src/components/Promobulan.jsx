@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import promo1 from '../assets/promo1.png';
-import promo2 from '../assets/promo2.png';
-import promo3 from '../assets/promo3.png';
+import promo1 from '../assets/Promo1.png';
+import promo2 from '../assets/Promo2.png';
+import promo3 from '../assets/Promo3.png';
 import AOS from 'aos'; //aos link untuk animation
 import 'aos/dist/aos.css'; //aos link untuk animation
 import { useEffect } from "react";
