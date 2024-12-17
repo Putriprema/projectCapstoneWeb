@@ -26,6 +26,7 @@ import Newpassm from "../pages/Newpassm";
 import Payment from '../Payment';
 import Bayar from '../Bayar';
 import Kurir from '../Kurir';
+import LoginMitra from "../pages/LoginMitra";
 import SimpanKeranjang from '../pages/SimpanKeranjang';
 import HalamanCrud from '../tabelcrud/halamanCrud';
 import AddUser from '../components/AddUser';
@@ -72,7 +73,7 @@ const Routing = () => {
                 <Route path='/AddUser' element={<AddUser/>}></Route>
                 <Route path='/UserList' element={<UserList/>}></Route>
                 <Route path='/EditUser/:1' element={<EditUser/>}></Route>
-            {/* </Route> */}
+                <Route path='/login-mitra' element={<LoginMitra/>}></Route>
         </Routes>
     );
 };
