@@ -4,7 +4,6 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import cucikering from '../assets/cucikering.png';
 import cucisetrika from '../assets/cucisetrika.png';
-import cucikilat from '../assets/cucikilat.png';
 import AOS from 'aos'; //aos link untuk animation
 import 'aos/dist/aos.css'; //aos link untuk animation
 import { useEffect } from "react";
