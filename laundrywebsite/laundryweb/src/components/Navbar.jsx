@@ -22,7 +22,7 @@ const CustomNavbar = ({ navValue }) => {
     setNavbarValue(getNavbarValue === "Profile" ? "" : "Profile");
   };
 
-  let Links = [
+  const Links = [
     { name: "Beranda", link: "/home" },
     {
       name: "Artikel",
@@ -36,18 +36,10 @@ const CustomNavbar = ({ navValue }) => {
   ];
 
   return (
-    <Navbar
-      expand="lg"
-      style={{ color: "white", backgroundColor: "#327094", height: "100px" }}
-    >
+    <Navbar expand="lg" style={{ color: "white", backgroundColor: "#327094", height: "100px" }}>
       <Container fluid>
         <div className="flex items-center cursor-pointer font-[poppins] text-white">
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-16 mr-2"
-            style={{ height: "150px", marginLeft: "30px" }}
-          />
+          <img src={logo} alt="Logo" className="h-16 mr-2" style={{ height: "150px", marginLeft: "30px" }} />
         </div>
         <Navbar.Toggle aria-controls="navbar-dark-example" />
         <Navbar id="navbar-dark-example">
@@ -62,29 +54,32 @@ const CustomNavbar = ({ navValue }) => {
                       position: "relative",
                       cursor: "pointer",
                       marginTop: "1%",
+                      color: "white", // Set default color for dropdown
                     }}
                   >
-                    {link.name}
+                    <span>{link.name}</span>
                     {showDropdown && (
                       <ul
                         style={{
                           position: "absolute",
                           left: "-45px",
                           backgroundColor: "#D9EAF4",
-                          padding: "30px",
+                          padding: "15px",
                           zIndex: 1,
                           marginTop: "10px",
                           borderRadius: "10px",
+                          boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
                         }}
                       >
                         {link.dropdown.map((subLink) => (
-                          <li key={subLink.subName}>
+                          <li key={subLink.subName} style={{ padding: "5px 10px" }}>
                             <Link
                               to={subLink.subLink}
                               style={{
                                 textDecoration: "none",
                                 color: "black",
                                 display: "block",
+                                padding: "8px 0",
                               }}
                               onMouseEnter={(e) => {
                                 e.target.style.color = "#327094";
@@ -101,12 +96,14 @@ const CustomNavbar = ({ navValue }) => {
                     )}
                   </li>
                 ) : (
-                  <Nav.Link
-                    href={link.link}
-                    className="text-white navbar-link  mb-1"
+                  <Link
+                    to={link.link}
                     style={{
-                      color: "black",
+                      color: "white",
                       transition: "color 0.3s",
+                      textDecoration: "none",
+                      padding: "8px 15px", // Padding to make links more consistent
+                      borderRadius: "5px",
                     }}
                     onMouseEnter={(e) => {
                       e.target.style.color = "cyan";
@@ -116,31 +113,25 @@ const CustomNavbar = ({ navValue }) => {
                     }}
                   >
                     {link.name}
-                  </Nav.Link>
+                  </Link>
                 )}
               </React.Fragment>
             ))}
-            <Link style={{color: 'white', paddingTop: '6px'}} to= '/Notifikasi'>
-              <ion-icon
-                name="notifications-outline"
-                style={{ fontSize: "24pt" }}
-              ></ion-icon>
+            <Link style={{ color: 'white', paddingTop: '6px' }} to='/Notifikasi'>
+              <ion-icon name="notifications-outline" style={{ fontSize: "24pt" }}></ion-icon>
             </Link>
-            <Link style={{color: 'white'}} to="/login-options">    
-                <>
+            <Link style={{ color: 'white' }} to="/login-options">
               <Button
-              // onClick={() => changeNavbarValue()}
-              style={{
-                padding: '8px 35px',
-                borderRadius: '13px',
-                marginBottom: '20px',
-              }}
-              variant='primary'
-              type='submit'
-            >
-             masuk
-            </Button>
-               </>
+                style={{
+                  padding: '8px 35px',
+                  borderRadius: '13px',
+                  marginBottom: '20px',
+                }}
+                variant='primary'
+                type='submit'
+              >
+                Masuk
+              </Button>
             </Link>
           </Nav>
         </Navbar>
@@ -150,4 +141,3 @@ const CustomNavbar = ({ navValue }) => {
 };
 
 export default CustomNavbar;
-// {!navValue ? "" : navValue }

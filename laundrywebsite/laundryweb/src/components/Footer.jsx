@@ -15,18 +15,32 @@ const Footer = () => {
           </div>
           <div className='sb_footer_nav'>
           <h1>Navigasi</h1>
-            <a href='/home'><p>Beranda</p></a>
-            <a href='/informasi'><p>Artikel</p></a>
-            <a href='/layanan'><p>Layanan</p></a>
-            <a href='/tentang-kami'><p>Tentang Kami</p></a>
-          </div>
+          {/* Mengganti tag <a> dengan <Link> untuk navigasi internal */}
+          <Link to='/home'>
+            <p>Beranda</p>
+          </Link>
+          <Link to='/informasi'>
+            <p>Artikel</p>
+          </Link>
+          <Link to='/layanan'>
+            <p>Layanan</p>
+          </Link>
+          <Link to='/tentang-kami'>
+            <p>Tentang Kami</p>
+          </Link>
+        </div>
         </div>
         <div className='sb_footer-links_div'>
           <h2>Layanan Kami</h2>
           <div className='sb_footer-links-content'>
-            <a href='/Layanan'><p>Cuci Kering</p></a>
-            <a href='/Layanan'><p>Cuci Setrika</p></a>
+            <Link to='/Layanan'>
+              <p>Cuci Kering</p>
+            </Link>
+            <Link to='/Layanan'>
+              <p>Cuci Setrika</p>
+            </Link>
           </div>
+
         </div>
         <div className='sb_footer-links_divv'>
           <h1>Kontak Kami</h1>
