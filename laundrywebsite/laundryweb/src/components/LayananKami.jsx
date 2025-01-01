@@ -37,7 +37,9 @@ const LayananKami = () => {
           <Card.Body style={{ textAlign: 'center' }}>
             <Card.Title style={{ fontWeight: 'bold' }}>Cuci Kering</Card.Title>
             <Button variant="primary" className="btn-lg">
-            <a style={{ color: 'white', textDecoration:'none'}} href="/Layanan">Pilih</a>
+            <Link to="/layanan" style={{ color: 'white', textDecoration: 'none' }}>
+              Pilih
+            </Link>
             </Button>
           </Card.Body>
         </Card>
@@ -56,7 +58,9 @@ const LayananKami = () => {
           <Card.Body style={{ textAlign: 'center' }}>
             <Card.Title style={{ fontWeight: 'bold' }}>Cuci Setrika</Card.Title>
             <Button variant="primary" className="btn-lg">
-            <a style={{ color: 'white', textDecoration:'none'}} href="/Layanan">Pilih</a>
+            <Link to="/layanan" style={{ color: 'white', textDecoration: 'none' }}>
+              Pilih
+            </Link>
             </Button>
           </Card.Body>
         </Card>
