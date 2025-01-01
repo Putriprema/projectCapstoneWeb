@@ -28,10 +28,10 @@ const CustomNavbar = ({ navValue }) => {
       name: "Artikel",
       dropdown: [
         { subName: "Informasi", subLink: "/informasi" },
-        { subName: "FA&Q", subLink: "/faq" },
+        { subName: "FAQ", subLink: "/faq" },
       ],
     },
-    { name: "Layanan", link: "/toko/den-gebol" },
+    { name: "Layanan", link: "/layanan" },
     { name: "Tentang Kami", link: "/tentang-kami" },
   ];
 

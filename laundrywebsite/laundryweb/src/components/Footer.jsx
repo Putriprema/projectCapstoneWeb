@@ -26,7 +26,6 @@ const Footer = () => {
           <div className='sb_footer-links-content'>
             <a href='/Layanan'><p>Cuci Kering</p></a>
             <a href='/Layanan'><p>Cuci Setrika</p></a>
-            <a href='/Layanan'><p>Cuci Kilat</p></a>
           </div>
         </div>
         <div className='sb_footer-links_divv'>
