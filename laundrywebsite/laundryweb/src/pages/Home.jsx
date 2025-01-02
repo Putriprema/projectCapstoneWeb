@@ -41,37 +41,60 @@ const Home = () => {
       setNavbarValue("profile");
     }
 
-  return (
-    <>
-      <Navbar navValue={getNavbarValue} />
-      <div data-aos="fade-right" id="Home" className="h-auto px-10 lg:px-[200px] flex items-center">
-        <div className="h-screen max-w-[700px] flex flex-col justify-center gap-y-5">
-          <h1 data-aos="fade-up" className="font-bold text-[20px]" style={{ color: "#4784A8" }} >
-            GET BETTER SERVICE
-          </h1>
-          <h1
-            data-aos="fade-up"
-            className="font-bold text-5xl transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);transition-duration: 150ms;"
-            style={{ color: "#4784A8" }}>
-            Laundry Berkualitas Hidup Tanpa Beban
-          </h1>
-          <p
-            data-aos="fade-up"
-            className="text-text max-w-[600px]"
-            style={{ fontSize: "14pt", fontWeight: "normal" }}>
-            Kami menyediakan layanan pengambilan dan pengantaran laundry secara
-            gratis demi mempermudah Anda, dengan jaminan waktu tepat.
-          </p>
-          <div>
-          <button
-            data-aos="fade-right"
-            className="px-6 lg:px-8 py-3 text-white rounded-full mt-4 bg-blue-600 transition duration-500"
-            style={{ backgroundColor: '#3579F6', ':hover': { backgroundColor: '#00FFFF' } }}>
-            <Link
-              to="/layanan"
+    return (
+      <>
+        <Navbar navValue={getNavbarValue} />
+        <div
+          data-aos="fade-right"
+          id="Home"
+          className="h-auto px-10 lg:px-[100px] flex items-center"
+          style={{ paddingLeft: "50px" }} // Tambahan padding agar lebih ke kiri
+        >
+          <div className="h-screen max-w-[600px] flex flex-col justify-center gap-y-4">
+            <h1
               data-aos="fade-up"
-              style={{ textDecoration: "none", color: "white" }}>
-              Laundry Sekarang
+              className="font-bold text-[16px]" // Ukuran font lebih kecil
+              style={{ color: "#4784A8" }}
+            >
+              GET BETTER SERVICE
+            </h1>
+            <h1
+              data-aos="fade-up"
+              className="font-bold text-4xl" // Ukuran font lebih kecil dari sebelumnya
+              style={{
+                color: "#4784A8",
+                lineHeight: "1.4", // Tambahkan line-height agar lebih rapi
+              }}
+            >
+              Laundry Berkualitas Hidup Tanpa Beban
+            </h1>
+            <p
+              data-aos="fade-up"
+              className="text-text max-w-[500px]" // Batas maksimal lebar lebih kecil
+              style={{
+                fontSize: "12pt", // Ukuran font lebih kecil
+                fontWeight: "normal",
+                textAlign: "justify", // Menambahkan justify untuk kesan rapi
+              }}
+            >
+              Kami menyediakan layanan pengambilan dan pengantaran laundry secara
+              gratis demi mempermudah Anda, dengan jaminan waktu tepat.
+            </p>
+            <div>
+              <button
+                data-aos="fade-right"
+                className="px-6 lg:px-8 py-2 text-white rounded-full mt-4 transition duration-500"
+                style={{
+                  backgroundColor: "#3579F6",
+                  fontSize: "14pt", // Ukuran font tombol
+                }}
+              >
+                <Link
+                  to="/layanan"
+                  data-aos="fade-up"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Laundry Sekarang
             </Link>
           </button>
           </div>
@@ -89,7 +112,7 @@ const Home = () => {
       <div>
         <Slickreview/>
       </div>
-      <div className="pt-20">
+      <div className="pt-10">
         <Footer />
       </div>
     </>

@@ -1,27 +1,32 @@
 /* LINK - LINK CSS JGN DI HAPUS!! */
 
-
-/* 1. link google font pake tample text (font:poppins) */
+/* 1. Link Google Font untuk font: Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,700;1,100;1,200&display=swap');
-/* 2. link untuk tailwind */
+
+/* 2. Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Tempat Editing di Sini */
 
-
-/* tempat editing disini */
-*{
+/* Global styling */
+* {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
+/* Custom ID styling */
 #Home {
     background-image: url("./assets/Banner1.png");
+    background-size: cover; /* Memastikan gambar memenuhi elemen */
+    background-position: center; /* Memusatkan gambar */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
 }
 
+/* Custom layer styles */
 @layer base {
     body {
-        background-color: #141414
+        background-color: #141414; /* Warna latar belakang default */
     }
 }

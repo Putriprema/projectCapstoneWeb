@@ -36,14 +36,14 @@ const CustomNavbar = ({ navValue }) => {
   ];
 
   return (
-    <Navbar expand="lg" style={{ color: "white", backgroundColor: "#327094", height: "100px" }}>
+    <Navbar expand="lg" style={{ color: "white", backgroundColor: "#327094", height: "80px" }}>
       <Container fluid>
         <div className="flex items-center cursor-pointer font-[poppins] text-white">
-          <img src={logo} alt="Logo" className="h-16 mr-2" style={{ height: "150px", marginLeft: "30px" }} />
+          <img src={logo} alt="Logo" className="h-16 mr-2" style={{ height: "130px", marginLeft: "20px" }} />
         </div>
         <Navbar.Toggle aria-controls="navbar-dark-example" />
         <Navbar id="navbar-dark-example">
-          <Nav className="ml-auto pt-2" style={{ gap: "40px", fontSize: "16pt" }}>
+          <Nav className="ml-auto pt-2" style={{ gap: "30px", fontSize: "12pt" }}>
             {Links.map((link) => (
               <React.Fragment key={link.name}>
                 {link.dropdown ? (
@@ -66,7 +66,7 @@ const CustomNavbar = ({ navValue }) => {
                           backgroundColor: "#D9EAF4",
                           padding: "15px",
                           zIndex: 1,
-                          marginTop: "10px",
+                          marginTop: "20px",
                           borderRadius: "10px",
                           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
                         }}
@@ -102,7 +102,7 @@ const CustomNavbar = ({ navValue }) => {
                       color: "white",
                       transition: "color 0.3s",
                       textDecoration: "none",
-                      padding: "8px 15px", // Padding to make links more consistent
+                      padding: "8px 10px", // Padding to make links more consistent
                       borderRadius: "5px",
                     }}
                     onMouseEnter={(e) => {
