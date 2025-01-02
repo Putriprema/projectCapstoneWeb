@@ -23,14 +23,14 @@ const LayananKami = () => {
       <h1
         data-aos="fade-up"
         className="text-center font-bold"
-        style={{ color: 'black', marginTop: '100px', fontSize: '24pt' }}
+        style={{ color: 'black', marginTop: '100px', fontSize: '16pt' }}
       >
         Layanan Kami
       </h1>
       <p
         data-aos="fade-up"
         className="text-center"
-        style={{ marginTop: '20px', fontSize: '18pt' }}
+        style={{ marginTop: '20px', fontSize: '12pt' }}
       >
         Silahkan Pilih layanan yang Dibutuhkan
       </p>
