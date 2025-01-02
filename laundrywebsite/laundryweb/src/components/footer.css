@@ -1,6 +1,6 @@
 .section_padding{
   padding: 3rem 3rem;
-  height: 450px;
+  height: 300px;
 }
 
 /* editing bagian footer */
@@ -8,7 +8,7 @@
   background-color: #327094;
   display: flex;
   flex-direction: column;
-  font-size: larger;
+  font-size: medium;
  
 }
 
@@ -20,7 +20,7 @@ justify-content: flex-end;
 
 .sb_footer-links,
 .sb_footer-links_div {
-margin-right: 35%;  
+margin-right: 30%;  
 }
 
 .sb_footer-links-content {
@@ -38,21 +38,20 @@ flex-direction: column;
 .logo-container img {
   width: 300px; 
   height: auto; 
-  margin-left: 20%; 
-  margin-top: 10px;
+  margin-left: 10%; 
 }
 
 
 /* editing bagian icon */
 .sb_footer-links-contentt  a{
-margin-right: 20px; 
+margin-right: 10px; 
 text-decoration: none; 
 
 }
 
 /* editing seluruh bagian navigasi */
 .sb_footer_nav{
-  margin-left: 150%;
+  margin-left: 145%;
     position: relative;
     top: -290px; 
   }
@@ -67,7 +66,7 @@ text-decoration: none;
 /* editing bagian list navigasi */
 .sb_footer_nav a {
   color: white; 
-  font-size: 14pt;
+  font-size: 12pt;
   text-decoration: none;
   margin-top: 1rem;
   font-weight: normal;
@@ -89,7 +88,7 @@ text-decoration: none;
   justify-content: flex-start;
   flex-direction: column;
   color: white;
-  font-size: 16pt;
+  font-size: 10pt;
   flex: 1;
   width: auto;
   align-items: flex-start;
@@ -128,7 +127,7 @@ text-decoration: none;
 display: row;
 justify-content: flex-end; 
 color: white;
-font-size: 25pt;
+font-size: 15pt;
 text-decoration: none;
 margin-top: 1rem;
 flex-direction: row;
@@ -137,7 +136,7 @@ flex-direction: row;
 
 
 .contact-icons a {
-  margin-bottom: 20px; 
+  margin-bottom: 14px; 
 }
 
 /* hover kontak kami */
@@ -155,7 +154,7 @@ flex-direction: row;
   align-items: flex-start; 
   flex-direction: column;
   color: white;
-  font-size: 14pt;
+  font-size: 12pt;
   text-decoration: none;
   margin: 0.5rem 0;
   cursor: pointer;
@@ -173,26 +172,25 @@ flex-direction: row;
 }
 
 .headline h4 {
-  font-size: 18pt; 
+  font-size: 14pt; 
 }
 
 .contact-photo {
   display: flex;
   justify-content: center; 
-  margin-top: 1rem; 
 }
 
 .contact-photo img {
-  width: 250px; 
-  height: 90px;
+  width: 240px; 
+  height: 60px;
   cursor: pointer; 
 }
 
 
 /* bagian copyright */
 .sb_footer-copyright{
-  font-size: 14pt;
-  line-height: 15px;
+  font-size: 12pt;
+  line-height: 10px;
   color: white;
   font-weight: normal;
   text-align: center;
