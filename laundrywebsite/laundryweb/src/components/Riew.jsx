@@ -23,31 +23,31 @@ const Riew = () => {
           className="text-center font-bold"
           style={{
             color: "black",
-            fontSize: "24pt",
+            fontSize: "pt",
             fontWeight: "bold",
-            marginTop: "200px",
-            marginBottom: "100px",
+            marginTop: "100px",
+            marginBottom: "50px",
           }}
         >
           Review Pelanggan Kami
         </h1>
-        <div data-aos="fade-up" className="d-flex justify-content-around">
+        <div data-aos="fade-up" className="d-flex justify-content-around flex-wrap">
           {/* Review 1 */}
           <Card
             data-aos="fade-up"
             style={{
               backgroundColor: "#D9EAF4",
-              width: "18rem",
+              width: "16rem",
               boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
-              borderRadius: "20px",
-              margin: "0 10px",
+              borderRadius: "15px",
+              margin: "20px 10px",
             }}
           >
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
-                marginTop: "20px",
+                marginTop: "15px",
               }}
             >
               <Card.Img
@@ -55,16 +55,16 @@ const Riew = () => {
                 src={Larasati}
                 alt="larasati"
                 style={{
-                  width: "200px",
-                  height: "200px",
+                  width: "150px",
+                  height: "150px",
                   objectFit: "cover",
-                  borderRadius: "20px",
+                  borderRadius: "15px",
                 }}
               />
             </div>
             <Card.Body style={{ textAlign: "center" }}>
-              <Card.Title style={{ fontWeight: "bold", fontSize: "16pt" }}>Larasati</Card.Title>
-              <Card.Text style={{ fontSize: "14pt" }}>
+              <Card.Title style={{ fontWeight: "bold", fontSize: "12pt" }}>Larasati</Card.Title>
+              <Card.Text style={{ fontSize: "9pt" }}>
                 Aplikasi laundry ini bener-bener nyelamatkan hidupku, tinggal pilih
                 layanan, jemput, dan hasilnya bersih banget!
               </Card.Text>
@@ -76,17 +76,17 @@ const Riew = () => {
             data-aos="fade-up"
             style={{
               backgroundColor: "#D9EAF4",
-              width: "18rem",
+              width: "16rem",
               boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
-              borderRadius: "20px",
-              margin: "0 10px",
+              borderRadius: "15px",
+              margin: "20px 10px",
             }}
           >
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
-                marginTop: "20px",
+                marginTop: "15px",
               }}
             >
               <Card.Img
@@ -94,16 +94,16 @@ const Riew = () => {
                 src={Rangga}
                 alt="rangga"
                 style={{
-                  width: "200px",
-                  height: "200px",
+                  width: "150px",
+                  height: "150px",
                   objectFit: "cover",
-                  borderRadius: "20px",
+                  borderRadius: "15px",
                 }}
               />
             </div>
             <Card.Body style={{ textAlign: "center" }}>
-              <Card.Title style={{ fontWeight: "bold", fontSize: "16pt" }}>Rangga</Card.Title>
-              <Card.Text style={{ fontSize: "14pt" }}>
+              <Card.Title style={{ fontWeight: "bold", fontSize: "12pt" }}>Rangga</Card.Title>
+              <Card.Text style={{ fontSize: "9pt" }}>
                 Puas banget pake aplikasi laundry ini, cepet, simpel, dan harganya
                 juga oke. No more ribet cari tempat cuci!
               </Card.Text>
@@ -115,17 +115,17 @@ const Riew = () => {
             data-aos="fade-up"
             style={{
               backgroundColor: "#D9EAF4",
-              width: "18rem",
+              width: "16rem",
               boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
-              borderRadius: "20px",
-              margin: "0 10px",
+              borderRadius: "15px",
+              margin: "20px 10px",
             }}
           >
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
-                marginTop: "20px",
+                marginTop: "15px",
               }}
             >
               <Card.Img
@@ -133,16 +133,16 @@ const Riew = () => {
                 src={Sarah}
                 alt="sarah"
                 style={{
-                  width: "200px",
-                  height: "200px",
+                  width: "150px",
+                  height: "150px",
                   objectFit: "cover",
-                  borderRadius: "20px",
+                  borderRadius: "15px",
                 }}
               />
             </div>
             <Card.Body style={{ textAlign: "center" }}>
-              <Card.Title style={{ fontWeight: "bold", fontSize: "16pt" }}>Sarah</Card.Title>
-              <Card.Text style={{ fontSize: "14pt" }}>
+              <Card.Title style={{ fontWeight: "bold", fontSize: "12pt" }}>Sarah</Card.Title>
+              <Card.Text style={{ fontSize: "9pt" }}>
                 Layanan pelanggan laundry ramah banget, selalu siap bantu. Pakaian
                 ku juga selalu wangi dan rapi setiap kali diantar kembali.
               </Card.Text>
@@ -150,7 +150,7 @@ const Riew = () => {
           </Card>
         </div>
       </div>
-    );        
+    );    
 };
 
 export default Riew;

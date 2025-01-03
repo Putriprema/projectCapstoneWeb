@@ -5,7 +5,7 @@ import { Container, Navbar } from 'react-bootstrap'; //link dari boostrap
 
 const Footer2 = () => {
   return (
-    <Navbar expand="lg" style={{ color:'white', backgroundColor: '#327094', height: '60px' }}>
+    <Navbar expand="lg" style={{ color:'white', backgroundColor: '#327094', height: '100px' }}>
       <Container fluid>
         <div className="flex items-center cursor-pointer font-[poppins] text-white">
         </div>

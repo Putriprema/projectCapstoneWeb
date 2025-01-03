@@ -36,7 +36,7 @@ const CustomNavbar = ({ navValue }) => {
   ];
 
   return (
-    <Navbar expand="lg" style={{ color: "white", backgroundColor: "#327094", height: "80px" }}>
+    <Navbar expand="lg" style={{ color: "white", backgroundColor: "#327094", height: "100px" }}>
       <Container fluid>
         <div className="flex items-center cursor-pointer font-[poppins] text-white">
           <img src={logo} alt="Logo" className="h-16 mr-2" style={{ height: "130px", marginLeft: "20px" }} />
@@ -120,15 +120,19 @@ const CustomNavbar = ({ navValue }) => {
             <Link style={{ color: 'white', paddingTop: '6px' }} to='/Notifikasi'>
               <ion-icon name="notifications-outline" style={{ fontSize: "24pt" }}></ion-icon>
             </Link>
-            <Link style={{ color: 'white' }} to="/login-options">
-              <Button
+            <Link 
+              style={{ color: 'white' }} 
+              to="/login-options"
+              className="d-none d-md-block"
+            >
+              <Button 
                 style={{
                   padding: '8px 35px',
                   borderRadius: '13px',
                   marginBottom: '20px',
                 }}
-                variant='primary'
-                type='submit'
+                variant="primary"
+                type="submit"
               >
                 Masuk
               </Button>

@@ -109,9 +109,6 @@ const Toko = () => {
   return (
     <div>
       <Navbar />
-      <div data-aos="fade-up">
-        <SearchButton />
-      </div>
       <div data-aos="fade-up" className="mx-20">
         <div style={{ boxShadow: "0px 3px 4px rgba(0, 0, 0, 0.2)", borderRadius: "10px", border: "none" }} className="flex justify-between mt-10">
           <div className="flex">
@@ -132,7 +129,7 @@ const Toko = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col justify-between hidden md:block">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "15px 40px" }}>
                 <h4 className="mb-4" style={{ fontSize: '1rem' }}>Rating Outlet</h4>
@@ -174,7 +171,7 @@ const Toko = () => {
             onClick={() => handleServiceSelection('Kemeja (Cuci Kering)', 2000)}
             style={{
               marginLeft: "10px",
-              backgroundColor: "#2B6CB0",
+              // backgroundColor: "#2B6CB0",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -188,7 +185,7 @@ const Toko = () => {
             onClick={() => handleServiceDecrease('Kemeja (Cuci Kering)')} 
             style={{
               marginLeft: "10px",
-              backgroundColor: "#E53E3E",
+              // backgroundColor: "#E53E3E",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -214,7 +211,7 @@ const Toko = () => {
             onClick={() => handleServiceSelection('Baju Kaos (Cuci Kering)', 1500)} 
             style={{
               marginLeft: "10px",
-              backgroundColor: "#2B6CB0",
+              // backgroundColor: "#2B6CB0",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -228,7 +225,7 @@ const Toko = () => {
             onClick={() => handleServiceDecrease('Baju Kaos (Cuci Kering)')} 
             style={{
               marginLeft: "10px",
-              backgroundColor: "#E53E3E",
+              // backgroundColor: "#E53E3E",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -254,7 +251,7 @@ const Toko = () => {
             onClick={() => handleServiceSelection('Celana Kain (Cuci Kering)', 2000)} 
             style={{
               marginLeft: "10px",
-              backgroundColor: "#2B6CB0",
+              // backgroundColor: "#2B6CB0",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -268,7 +265,7 @@ const Toko = () => {
             onClick={() => handleServiceDecrease('Celana Kain (Cuci Kering)')} 
             style={{
               marginLeft: "10px",
-              backgroundColor: "#E53E3E",
+              // backgroundColor: "#E53E3E",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -303,7 +300,7 @@ const Toko = () => {
             onClick={() => handleServiceSelection('Kemeja (Cuci Setrika)', 2000)} 
             style={{
               marginLeft: "10px",
-              backgroundColor: "#2B6CB0",
+              // backgroundColor: "#2B6CB0",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -317,7 +314,7 @@ const Toko = () => {
             onClick={() => handleServiceDecrease('Kemeja (Cuci Setrika)')} 
             style={{
               marginLeft: "10px",
-              backgroundColor: "#E53E3E",
+              // backgroundColor: "#E53E3E",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -343,7 +340,7 @@ const Toko = () => {
             onClick={() => handleServiceSelection('Baju Kaos (Cuci Setrika)', 1500)} 
             style={{
               marginLeft: "10px",
-              backgroundColor: "#2B6CB0",
+              // backgroundColor: "#2B6CB0",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -357,7 +354,7 @@ const Toko = () => {
             onClick={() => handleServiceDecrease('Baju Kaos (Cuci Setrika)')} 
             style={{
               marginLeft: "10px",
-              backgroundColor: "#E53E3E",
+              // backgroundColor: "#E53E3E",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -383,7 +380,7 @@ const Toko = () => {
             onClick={() => handleServiceSelection('Celana/Rok Kain (Cuci Setrika)', 2000)} 
             style={{
               marginLeft: "10px",
-              backgroundColor: "#2B6CB0",
+              // backgroundColor: "#2B6CB0",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -397,7 +394,7 @@ const Toko = () => {
             onClick={() => handleServiceDecrease('Celana/Rok Kain (Cuci Setrika)')} 
             style={{
               marginLeft: "10px",
-              backgroundColor: "#E53E3E",
+              // backgroundColor: "#E53E3E",
               color: "white",
               border: "none",
               borderRadius: "5px",
