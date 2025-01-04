@@ -67,37 +67,6 @@ const Loginoption = () => {
           >
             Masuk Sebagai
           </span>
-
-          {/* pelanggan */}
-          <div data-aos="zoom-in">
-            <Link to="/regis-pelanggan"><Button
-              variant="outline-info"
-              className="ml-2 text-white"
-              data-aos="zoom-in"
-              style={{
-                marginBottom: "20px", 
-                backgroundColor: "#3579F6",
-                width: "600px",
-                height: "100px",
-                borderRadius: "20px",
-                transition: "background-color 0.3s",
-                overflow: "hidden",
-                position: "relative",
-                fontSize: "18pt",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = "#3579F6";
-                zoomInButton(e);
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = "#00BEFF";
-                zoomOutButton(e);
-              }}
-            >
-              Pelanggan
-            </Button></Link>
-          </div>
-
           {/* mitra */}
           <div data-aos="zoom-in">
             <Link to='/regis-mitra'><Button
@@ -122,7 +91,7 @@ const Loginoption = () => {
                 zoomOutButton(e);
               }}
             >
-              Mitra
+              Admin
             </Button></Link>
           </div>
         </div>
