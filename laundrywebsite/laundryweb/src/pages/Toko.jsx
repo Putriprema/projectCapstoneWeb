@@ -129,7 +129,7 @@ const Toko = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-between hidden md:block">
+          <div className="flex flex-col justify-between md:block">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "15px 40px" }}>
                 <h4 className="mb-4" style={{ fontSize: '1rem' }}>Rating Outlet</h4>
